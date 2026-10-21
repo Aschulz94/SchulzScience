@@ -616,10 +616,6 @@ a.hl:hover .hl-t{color:var(--accent);text-decoration:underline;text-underline-of
           <figcaption>Whiskers line the tip of an Asian elephant’s trunk.</figcaption>
         </figure>
       </div>
-      <figure class="va">
-        <img src="images/science-visual-abstract.jpg" loading="lazy" width="2000" height="1169" alt="Visual abstract of the Science paper. Left: rats whisk actively with muscles while elephant whiskers are static, leading to the hypothesis that elephants make up for missing whisker muscles with tailored geometry, porosity and stiffness. Center: the whiskers were characterized from nanometers to centimeters using nanoindentation inside a scanning electron microscope, micro-computed tomography and finite element analysis. Right: unlike rat whiskers, elephant whiskers shift from a porous, stiff, circular base to a dense, soft, ovular tip; the porosity gradient reduces mass and absorbs energy, and the stiffness gradient adds deflection and encodes where contact happens.">
-        <figcaption>Visual abstract from Schulz et al., <i>Science</i> 391, 712–718 (2026).</figcaption>
-      </figure>
     </div>
   </section>
 
@@ -769,10 +765,8 @@ a.hl:hover .hl-t{color:var(--accent);text-decoration:underline;text-underline-of
           <img src="images/andrew.jpg" loading="lazy" width="800" height="799" alt="Portrait of Andrew K. Schulz">
         </figure>
         <div class="bio">
-          <p>Andrew K. Schulz is a Group Leader in the Haptic Intelligence Department at the Max Planck Institute for Intelligent Systems (MPI-IS) in Stuttgart, an <a href="https://is.mpg.de/hi/awards/andrew-k-schulz-wins-a-two-year-humboldt-research-fellowship">Alexander von Humboldt Fellow</a>, and an Associated Postdoc with the International Max Planck Research School for Intelligent Systems (IMPRS-IS).</p>
-          <p>He is a mechanical engineer trained in applied mathematics and soft-matter physics. He earned a B.S. in Mathematics and Mechanical Engineering from Oklahoma State University and a Ph.D. in Mechanical Engineering from Georgia Tech (2022), advised by David L. Hu, with a thesis on the mechanics and materials of the elephant trunk. He leads interdisciplinary teams that bridge engineering mechanics and biology, working with zoos and natural history museums, including the American Museum of Natural History.</p>
-          <p>As instructor of record at Georgia Tech, he taught two project-based courses to more than 100 students from over 22 majors, with a mean teaching-effectiveness score of 4.98/5 and a place on the Class of 1941 CIOS Honor Roll. He has mentored 38 undergraduate and 8 master’s researchers, including eight NSF GRFP awardees.</p>
-          <p>As an autistic researcher with ADHD, he builds open-source, low-cost methods that keep rigorous science accessible to blind and low-vision scientists, neurodivergent scientists, and groups without major facilities.</p>
+          <p>Andrew K. Schulz is a Group Leader in the Haptic Intelligence Department at the Max Planck Institute for Intelligent Systems in Stuttgart and an <a href="https://is.mpg.de/hi/awards/andrew-k-schulz-wins-a-two-year-humboldt-research-fellowship">Alexander von Humboldt Fellow</a>. He holds a Ph.D. in Mechanical Engineering from Georgia Tech (2022), where he studied the mechanics of the elephant trunk with David L. Hu.</p>
+          <p>His work is featured at the American Museum of Natural History and has been covered by The New York Times, NPR and The Washington Post, and he was selected as a 2024 Lindau Nobel Laureate Meeting young scientist in physics. As an autistic researcher with ADHD, he builds open, low-cost methods that keep science accessible to everyone.</p>
         </div>
       </div>
     </div>
@@ -930,7 +924,7 @@ document.getElementById('guests').innerHTML=MENTEES.filter(m=>m[5]===2).sort(byF
 document.getElementById('mascots').innerHTML=MENTEES.filter(m=>m[5]===3).sort(byFirst).map(squadItem).join('');
 document.getElementById('alumni').innerHTML=MENTEES.filter(m=>m[5]===1).sort(byFirst).map(squadItem).join('');
 const COLLABS=[['Christoph Keplinger','MPI-IS'],['Florian Hartmann','MPI-IS'],['Gunther Richter','MPI-IS'],['Michael Muehlebach','MPI-IS'],['Vesna Srot','MPI-FKF'],['Peter A. van Aken','MPI-FKF'],['Giulia Ballardini','MPI-IS'],['Lawrence Smith','MPI-IS'],['Muhammad Yunusa','MPI-IS'],['Michael Brecht','HU Berlin'],['Elisabetta Matsumoto','Georgia Tech'],['Abigale Stangl','Georgia Tech'],['Maegan Tucker','Georgia Tech'],['Roxanne Moore','Georgia Tech'],['Krishma Singal','Georgia Tech'],['David L. Hu','Georgia Tech'],['Adam Summers','Univ. of Washington'],['Karly Cohen','Univ. of Washington'],['Claire Higgins','Imperial College'],['Joseph Mendelson III','Zoo Atlanta']];
-document.getElementById('collabs').innerHTML=COLLABS.map(([n,a])=>`<span>${esc(n)} <i>· ${esc(a)}</i></span>`).join('');
+document.getElementById('collabs').innerHTML=COLLABS.slice().sort(byFirst).map(([n,a])=>`<span>${esc(n)} <i>· ${esc(a)}</i></span>`).join('');
 
 
 /* light / dark toggle: remembers the choice when the browser allows it */
