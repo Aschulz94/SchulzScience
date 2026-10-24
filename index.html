@@ -25,7 +25,7 @@
 <link rel="preload" href="fonts/helvetica-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/helvetica-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="canonical" href="https://www.schulzscience.com/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='278 380 50 80'%3E%3Cpath transform='rotate(18 301 420)' d='M296.47,454.76c-9.48-9.25,7-69.92,9.02-69.2.6.21-.72,5.58-1.07,19.63-.73,29.39,4.09,44.17-.89,49.24-1.89,1.92-5.05,2.3-7.06.34Z' fill='%239C4A2C'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='278 380 50 80'%3E%3Cpath transform='rotate(18 301 420)' d='M296.47,454.76c-9.48-9.25,7-69.92,9.02-69.2.6.21-.72,5.58-1.07,19.63-.73,29.39,4.09,44.17-.89,49.24-1.89,1.92-5.05,2.3-7.06.34Z' fill='%23C8202A'/%3E%3C/svg%3E">
 <style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
 <style>
 @font-face{font-family:'AKS Helvetica';src:url(fonts/helvetica-300.woff2) format('woff2');font-weight:300;font-style:normal;font-display:swap}
@@ -35,21 +35,21 @@
 /* Layout: one long scroll read as a field journal in chapters. Each chapter opens with a Cinzel rune-name over a modern display headline; the hero pairs the thesis with a drawn root-to-tip whisker gradient; Quests follow the measure → mimic → model → deploy workflow. */
 :root{
   /* warm palette drawn from the photos: ivory print page, espresso trunk shadow, rust sweater, sand keratin, plant-wall olive */
-  --bg:#F6F0E6; --surface:#FFFBF4; --ink:#2B2420; --muted:#6E6155; --line:#E2D7C8;
-  --accent:#9C4A2C; --root:#9C4A2C; --tip:#96602E; --gold:#B07A3E; --body:#3F3530; --chip:#EDE3D5; --peach:#E8C3A8; --navy:#7D7A45; --tan:#C19E82; --greige:#B5A59C;
-  --f-rune:"AKS Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --f-display:"AKS Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --f-body:"AKS Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --f-mono:"AKS Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bg:#FFFFFF; --alt:#F5F5F7; --card:#F5F5F7; --fill:#E8E8ED; --surface:#FFFFFF; --ink:#1D1D1F; --body:#424245; --muted:#6E6E73; --line:#D2D2D7;
+  --accent:#3E5F7E; --accent-text:#3E5F7E; --accent-hover:#2F4B66; --on-accent:#FFFFFF; --violet:#6A6F98; --root:#1D1D1F; --tip:#6E6E73; --gold:#6E6E73; --chip:#F5F5F7; --peach:#E8E8ED; --navy:#E8E8ED; --tan:#E8E8ED; --greige:#E8E8ED;
+  --f-rune:-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "AKS Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --f-display:-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "AKS Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --f-body:-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "AKS Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --f-mono:-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "AKS Helvetica", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --s-1:.8125rem; --s0:1rem; --s1:1.125rem; --s2:1.4rem; --s3:2.1rem; --s4:clamp(2.4rem,5.4vw,4rem);
   --w:1120px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#1C1714; --surface:#26201B; --ink:#F3ECE2; --muted:#B8AA9A; --line:#3A302A;
-  --accent:#E09A72; --root:#D07A4E; --tip:#E8C08E; --gold:#D9A55E; --body:#D8CBBB; --chip:#2E2620; --peach:#E8C3A8; --navy:#A9A66A; --tan:#C19E82; --greige:#B5A59C; color-scheme:dark}}
+  --bg:#000000; --alt:#161617; --card:#1D1D1F; --fill:#2C2C2E; --surface:#1D1D1F; --ink:#F5F5F7; --body:#D2D2D7; --muted:#A1A1A6; --line:#424245;
+  --accent:#9FBAD3; --accent-text:#9FBAD3; --accent-hover:#B8CCE0; --on-accent:#000000; --violet:#B9BEDF; --root:#F5F5F7; --tip:#A1A1A6; --gold:#A1A1A6; --chip:#1D1D1F; --peach:#2C2C2E; --navy:#2C2C2E; --tan:#2C2C2E; --greige:#2C2C2E; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#1C1714; --surface:#26201B; --ink:#F3ECE2; --muted:#B8AA9A; --line:#3A302A;
-  --accent:#E09A72; --root:#D07A4E; --tip:#E8C08E; --gold:#D9A55E; --body:#D8CBBB; --chip:#2E2620; --peach:#E8C3A8; --navy:#A9A66A; --tan:#C19E82; --greige:#B5A59C; color-scheme:dark}
+  --bg:#000000; --alt:#161617; --card:#1D1D1F; --fill:#2C2C2E; --surface:#1D1D1F; --ink:#F5F5F7; --body:#D2D2D7; --muted:#A1A1A6; --line:#424245;
+  --accent:#9FBAD3; --accent-text:#9FBAD3; --accent-hover:#B8CCE0; --on-accent:#000000; --violet:#B9BEDF; --root:#F5F5F7; --tip:#A1A1A6; --gold:#A1A1A6; --chip:#1D1D1F; --peach:#2C2C2E; --navy:#2C2C2E; --tan:#2C2C2E; --greige:#2C2C2E; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
@@ -503,6 +503,134 @@ a.hl:hover .hl-t{color:var(--accent);text-decoration:underline;text-underline-of
 .va img{display:block;width:100%;height:auto}
 .va figcaption{font-size:var(--s-1);color:#56493F;margin-top:10px}
 @media (max-width:560px){.va{padding:8px;margin-top:28px}}
+
+/* ==== Apple-style layer ====
+   White and light-grey bands that alternate, system San Francisco type (Helvetica fallback),
+   large centred headlines, 18px rounded photos and cards, pill buttons, one blue for links.
+   Every text pair meets WCAG AA in both themes; links are underlined on hover and focus,
+   and the blue is never the only marker of meaning. */
+body{background:var(--bg);color:var(--ink);font-size:1.0625rem;line-height:1.53;letter-spacing:-.011em}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;letter-spacing:-.022em}
+::selection{background:color-mix(in srgb,var(--accent) 25%,transparent);color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+a{color:var(--accent)}
+main a:not(.btn):not(.item):not([class*="nav"]){text-decoration-line:none}
+main a:hover,main a:focus-visible{text-decoration-line:underline!important;text-decoration-thickness:1px;text-underline-offset:3px}
+.ev a,.out-stack a,.bio a,.sum a,.head p a,.pf a,.feature .sum a{text-decoration-line:underline!important;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent)}
+
+/* global nav: thin translucent bar */
+header.top{background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+header.top .wrap{height:52px}
+.brand{font-weight:600;font-size:1.0rem;letter-spacing:-.01em}
+.brand .logo path{fill:var(--ink)}
+nav.links a{font-size:.78rem;font-weight:400;letter-spacing:-.005em;color:var(--body);padding:6px 10px;border-radius:0}
+nav.links a:hover,nav.links a.on{color:var(--ink);background:none;text-decoration:none}
+nav.links a.on{font-weight:600}
+.theme-btn{border:0;width:34px;height:34px;color:var(--body)}
+.theme-btn:hover{background:var(--fill);color:var(--ink)}
+html{scroll-padding-top:64px}
+
+/* hero: centred headline, then a wide rounded photo */
+.hero{background:var(--bg)}
+.hero .wrap{grid-template-columns:1fr;justify-items:center;text-align:center;gap:44px;padding-block:72px 64px}
+.hero .wrap>div:first-child{max-width:820px;display:flex;flex-direction:column;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.8rem);line-height:1.05;letter-spacing:-.03em;margin-top:0}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{font-size:clamp(1.15rem,1.8vw,1.4rem);line-height:1.4;color:var(--body);max-width:36em;margin-top:22px}
+.who{justify-content:center;font-size:.95rem;color:var(--muted);gap:4px 18px}
+.who b{color:var(--ink)}
+.hero .links-row{justify-content:center;align-items:center;gap:12px 22px;margin-top:28px}
+.hero .links-row a{font-size:1.05rem;color:var(--accent);text-decoration:none}
+.hero .links-row a:first-child{background:var(--accent);color:var(--on-accent);padding:11px 22px;border-radius:980px;font-weight:400}
+.hero .links-row a:first-child:hover{text-decoration:none!important;background:var(--accent-hover)}
+.hero-photo{justify-self:center;width:100%;max-width:1040px;aspect-ratio:16/9;border-radius:22px;border:0}
+@media (max-width:880px){.hero-photo{aspect-ratio:4/3}.hero .wrap{padding-block:48px 40px}}
+
+/* alternating full-bleed bands */
+section.block{background:var(--bg)}
+#lore,#legend,#guild,#tidings{background:var(--alt)}
+section.block+section.block>.wrap{border-top:0}
+section.block>.wrap{padding-block:88px}
+@media (max-width:820px){section.block>.wrap{padding-block:56px}}
+.head{text-align:center;margin:0 auto 52px;max-width:820px}
+.head .chap{margin-bottom:8px}
+.head .chap .rune,.chap .rune{font-size:1rem!important;font-weight:600;letter-spacing:-.01em;text-transform:none;color:var(--accent-text)}
+.head h2{font-size:clamp(2.2rem,4.6vw,3.5rem);line-height:1.07;letter-spacing:-.028em}
+.head p{margin:18px auto 0;font-size:1.15rem;line-height:1.5;color:var(--body);max-width:40em}
+.contact .chap .rune{color:var(--accent-text)}
+.subh,.sub{font-size:1.5rem!important;font-weight:600;letter-spacing:-.02em;text-transform:none;color:var(--ink);margin-top:44px}
+
+/* photos and cards */
+.slot{border-radius:18px;border:0!important;background:var(--fill)}
+.legend-photo .slot,.tomes-photo .slot,.sq-split .legend-photo .slot{border-radius:18px}
+.legend-photo figcaption{color:var(--muted);font-size:.82rem}
+.aims{gap:22px}
+.aim{background:var(--card);border-radius:22px;padding:0 0 26px;overflow:hidden;gap:12px}
+.aim .slot{border-radius:0}
+.aim .qhead,.aim h3,.aim>p,.aim .ev{padding-inline:26px}
+.aim .qhead .rune{font-size:.8rem!important;font-weight:600;letter-spacing:0;text-transform:none;color:var(--accent-text)}
+.aim h3{font-size:1.45rem;line-height:1.15}
+.aim>p{color:var(--body);font-size:1rem}
+.ev{font-size:.9rem;margin-top:2px}
+
+/* highlight */
+.feature .journal{color:var(--muted);font-size:.95rem;font-weight:600}
+.feature h3 a{color:var(--ink)}
+.feature .links-row a,.split-main .links-row a,.contact .links-row a{color:var(--accent);text-decoration:none;font-size:1.02rem}
+
+/* publications */
+.pubbar{gap:6px;background:var(--card);padding:4px;border-radius:980px;display:inline-flex;flex-wrap:wrap}
+.pubbar button{border:0;border-radius:980px;background:transparent;color:var(--body);font-size:.88rem;padding:8px 16px}
+.pubbar button:hover{color:var(--ink)}
+.pubbar button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+@media (max-width:560px){.pubbar{border-radius:18px}}
+.year{border-top:1px solid var(--line)}
+.year>.y{font-weight:600;color:var(--ink)}
+.pub .t{font-weight:600}
+.pub .t a{color:var(--ink)}
+.pub .t a:hover{color:var(--accent)}
+.sigil{border-radius:10px;background:var(--card);color:var(--ink)}
+.badge{background:var(--card);color:var(--body);border-radius:980px;padding:2px 9px;font-weight:600;letter-spacing:0;text-transform:none;font-size:.74rem}
+.tomes-photo .slot{border-radius:22px}
+
+/* team */
+.roster li{border-top:1px solid var(--line)}
+.avatar{background:var(--fill)}
+.roster .n,.li-link{font-weight:600;color:var(--ink)}
+.li-tag{border-radius:4px;background:var(--muted);color:var(--bg)}
+.li-link:hover .li-tag{background:var(--accent)}
+.pi{border-top:1px solid var(--line)}
+
+/* outreach and news */
+.out-stack article{border-top:1px solid var(--line)}
+.out-stack article:last-child{border-bottom:1px solid var(--line)}
+.press-list{border-top:1px solid var(--line)}
+.press-list li{border-bottom:1px solid var(--line)}
+.py{font-weight:600;color:var(--muted)}
+.pp{letter-spacing:0;text-transform:none;font-weight:600;color:var(--ink);font-size:.95rem}
+
+/* contact */
+.contact h2{letter-spacing:-.03em}
+.mail code{border:0;border-radius:12px;background:var(--card);font-family:var(--f-body)}
+.mail button{border:0;border-radius:980px;background:var(--accent);color:var(--on-accent);padding:11px 22px}
+.mail button:hover{background:var(--accent-hover)}
+.socials a{border-top:1px solid var(--line)}
+.socials a:hover{color:var(--accent)}
+
+/* footer: small grey type */
+footer{background:var(--alt);border-top:0}
+footer .wrap{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-block:20px 28px}
+footer a{color:var(--body)}
+
+/* cards sit one step lighter than the grey bands they live on */
+
+.subh,.sub{margin-bottom:10px}
+.allies li{padding:12px 0}
+.allies .n{font-weight:600}
+.allies .n>a.li-link{text-decoration-line:underline!important;text-decoration-color:var(--muted);text-decoration-thickness:1px;text-underline-offset:4px}
+.allies .li-tag{margin-left:8px}
+.allies .n>a.li-link:hover{color:var(--accent);text-decoration-color:var(--accent)}
+.allies .r{font-size:.86rem;color:var(--muted);margin-top:2px}
 </style>
 </head>
 <body>
@@ -513,13 +641,13 @@ a.hl:hover .hl-t{color:var(--accent);text-decoration:underline;text-underline-of
       <span>Andrew K. Schulz</span>
     </a>
     <nav class="links" aria-label="Sections">
+      <a href="#lore">Bio</a>
       <a href="#quests">Research</a>
       <a href="#legend">Highlight</a>
       <a href="#tomes">Publications</a>
       <a href="#guild">Team</a>
       <a href="#sidequests">Outreach</a>
       <a href="#tidings">News</a>
-      <a href="#lore">Bio</a>
       <a href="#raven">Contact</a>
     </nav>
     <button type="button" class="theme-btn" id="themeBtn" aria-label="Switch to dark mode" title="Switch theme">
@@ -554,10 +682,27 @@ a.hl:hover .hl-t{color:var(--accent);text-decoration:underline;text-underline-of
     </div>
   </section>
 
+  <section class="block" id="lore">
+    <div class="wrap">
+      <div class="head">
+        <div class="chap"><span class="rune">I · Lore</span></div>
+        <div><h2>The adventurer so far</h2></div>
+      </div>
+      <div class="lore">
+        <figure class="slot" data-slot>
+          <img src="images/andrew.jpg" loading="lazy" width="800" height="799" alt="Portrait of Andrew K. Schulz">
+        </figure>
+        <div class="bio">
+          <p>Andrew K. Schulz is a Group Leader in the Haptic Intelligence Department at the Max Planck Institute for Intelligent Systems in Stuttgart and an <a href="https://is.mpg.de/hi/awards/andrew-k-schulz-wins-a-two-year-humboldt-research-fellowship">Alexander von Humboldt Fellow</a>. He holds a Ph.D. in Mechanical Engineering from Georgia Tech (2022), where he studied the mechanics of the elephant trunk with David L. Hu.</p>
+          <p>His work is featured at the American Museum of Natural History and has been covered by The New York Times, NPR and The Washington Post, and he was selected as a 2024 Lindau Nobel Laureate Meeting young scientist in physics. As an autistic researcher with ADHD, he builds open, low-cost methods that keep science accessible to everyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="block" id="quests">
     <div class="wrap">
       <div class="head">
-        <div class="chap"><span class="rune">I · Quests</span></div>
+        <div class="chap"><span class="rune">II · Quests</span></div>
         <div>
           <h2>Research themes</h2>
           <p>Most sensors are built from uniform materials, so filtering and encoding happen downstream in electronics and software. Biology builds that work into the material itself. I re-create these graded structures as robomaterial models, fabricated specimens in which the gradient is the experimental variable, to learn when and how each gradient helps a robot or device.</p>
@@ -600,7 +745,7 @@ a.hl:hover .hl-t{color:var(--accent);text-decoration:underline;text-underline-of
   <section class="block" id="legend">
     <div class="wrap">
       <div class="head">
-        <div class="chap"><span class="rune">II · Legend</span></div>
+        <div class="chap"><span class="rune">III · Legend</span></div>
         <div><h2>Elephant whiskers carry physical intelligence</h2></div>
       </div>
       <div class="feature">
@@ -622,7 +767,7 @@ a.hl:hover .hl-t{color:var(--accent);text-decoration:underline;text-underline-of
   <section class="block" id="tomes">
     <div class="wrap">
       <div class="head">
-        <div class="chap"><span class="rune">III · Tomes</span></div>
+        <div class="chap"><span class="rune">IV · Tomes</span></div>
         <div>
           <h2>Publications</h2>
           <p>Full list on <a href="https://scholar.google.com/citations?user=K9uaxNMAAAAJ&hl=en">Google Scholar</a>. * Corresponding author.</p>
@@ -651,7 +796,7 @@ a.hl:hover .hl-t{color:var(--accent);text-decoration:underline;text-underline-of
   <section class="block" id="guild">
     <div class="wrap">
       <div class="head">
-        <div class="chap"><span class="rune">IV · Guild</span></div>
+        <div class="chap"><span class="rune">V · Guild</span></div>
         <div>
           <h2>The Schulz Squad and allied guilds</h2>
         </div>
@@ -687,14 +832,14 @@ a.hl:hover .hl-t{color:var(--accent);text-decoration:underline;text-underline-of
       <h4 class="subh">Alumni</h4>
       <ul class="roster roster-grid" id="alumni"></ul>
       <h4 class="subh">Allied guilds</h4>
-      <div class="collab" id="collabs"></div>
+      <ul class="roster roster-grid allies" id="collabs"></ul>
     </div>
   </section>
 
   <section class="block" id="sidequests">
     <div class="wrap">
       <div class="head">
-        <div class="chap"><span class="rune">V · Side Quests</span></div>
+        <div class="chap"><span class="rune">VI · Side Quests</span></div>
         <div>
           <h2>Outreach, accessibility and AuDHD advocacy</h2>
           <p>A structure that senses by contact should be taught by contact. Much of my outreach grows out of the research itself and out of building labs and classrooms where neurodivergent people belong.</p>
@@ -726,7 +871,7 @@ a.hl:hover .hl-t{color:var(--accent);text-decoration:underline;text-underline-of
   <section class="block" id="tidings">
     <div class="wrap">
       <div class="head">
-        <div class="chap"><span class="rune">VI · Tidings</span></div>
+        <div class="chap"><span class="rune">VII · Tidings</span></div>
         <div>
           <h2>In the news</h2>
         </div>
@@ -754,23 +899,6 @@ a.hl:hover .hl-t{color:var(--accent);text-decoration:underline;text-underline-of
     </div>
   </section>
 
-  <section class="block" id="lore">
-    <div class="wrap">
-      <div class="head">
-        <div class="chap"><span class="rune">VII · Lore</span></div>
-        <div><h2>The adventurer so far</h2></div>
-      </div>
-      <div class="lore">
-        <figure class="slot" data-slot>
-          <img src="images/andrew.jpg" loading="lazy" width="800" height="799" alt="Portrait of Andrew K. Schulz">
-        </figure>
-        <div class="bio">
-          <p>Andrew K. Schulz is a Group Leader in the Haptic Intelligence Department at the Max Planck Institute for Intelligent Systems in Stuttgart and an <a href="https://is.mpg.de/hi/awards/andrew-k-schulz-wins-a-two-year-humboldt-research-fellowship">Alexander von Humboldt Fellow</a>. He holds a Ph.D. in Mechanical Engineering from Georgia Tech (2022), where he studied the mechanics of the elephant trunk with David L. Hu.</p>
-          <p>His work is featured at the American Museum of Natural History and has been covered by The New York Times, NPR and The Washington Post, and he was selected as a 2024 Lindau Nobel Laureate Meeting young scientist in physics. As an autistic researcher with ADHD, he builds open, low-cost methods that keep science accessible to everyone.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="block" id="raven">
     <div class="wrap">
@@ -831,13 +959,13 @@ const PUBS=[
  [2025,'Quantifying haptic quality: texture rendering across devices','Fazlollahi, F., Seifi, H., Ballardini, G., Taghizadeh, Z., Schulz, A.K., MacLean, K.E., Kuchenbecker, K.J.','IEEE World Haptics Conference, work in progress','','c',0,''],
  [2025,'Bridging the green skills gap: engaging undergraduate students as changemakers in engineering education','Simancek, R., Willman, H., Ismail, A., Telepo, E., Matthew, V., Schulz, A.K.*','ASEE Annual Conference','https://peer.asee.org/bridging-the-green-skills-gap-engaging-undergraduate-students-as-changemakers-in-engineering-education','c',0,''],
  [2025,'Bio-inspired gradient (BIG) whiskers: stiffness-shifting structures provide dynamic functional benefits for contact sensing','Schulz, A.K., Andrussow, I., Farsijani, F., Faulkner, R., Kuchenbecker, K.J.','IEEE RoboSoft, extended abstract','https://is.mpg.de/publications/schulz25-rsea-stiffness','c',0,'Selected oral'],
- [2024,'Elephants develop wrinkles through both form and function','Schulz, A.K., Reveyaz, N., Kaufmann, L., Hildebrandt, T., Brecht, M.*','Royal Society Open Science 11, 240851','https://royalsocietypublishing.org/doi/abs/10.1098/rsos.240851','j',0,''],
+ [2024,'Elephants develop wrinkles through both form and function','Schulz, A.K., Reveyaz, N., Kaufmann, L., Hildebrandt, T., Brecht, M.*','Royal Society Open Science 11, 240851','https://royalsocietypublishing.org/doi/abs/10.1098/rsos.240851','j',1,''],
  [2024,'Five key strategies for organizing interdisciplinary scientific events to strengthen careers, collaborations, and creativity','Schulz, A.K.*, Schwaner, M.J.*, Manafzadeh, A.R.*','Integrative and Comparative Biology 64, 3','https://academic.oup.com/icb/article-abstract/64/3/769/7679996','e',0,''],
  [2024,'Being neurodivergent in academia: autistic and abroad','Schulz, A.K.*','eLife 13, e97640','https://elifesciences.org/articles/97640','e',0,''],
  [2024,'Empowering change: the role of student changemakers in advancing sustainability within engineering education','Matthew, V.*, Machesky, J., Simancek, R., Willman, H., Ismail, A., Telepo, E., Schulz, A.K.*','ASEE Annual Conference','https://peer.asee.org/47242.pdf','c',0,''],
  [2024,'Quantifying haptic quality: stiffness rendering across devices','Fazlollahi, F., Seifi, H., Ballardini, G., Taghizadeh, Z., Schulz, A.K., MacLean, K.E., Kuchenbecker, K.J.','IEEE Haptics Symposium, work in progress','','c',0,''],
  [2023,'ForageFeeder: a low-cost open-source feeder for randomly distributing food','Zhang, M., Jadali, N., Schulz, A.K.*, Meyerchick, J., Hu, D.L.*','HardwareX 14, e00405','https://www.sciencedirect.com/science/article/pii/S2468067223000123','j',0,''],
- [2023,'Elephants have an adaptable prehensile grip','Schulz, A.K., Wu, J.N., Tang, C.Y., Seleb, B., Reidenberg, J.S., Elgart, N., Hu, D.L.*','Bioinspiration & Biomimetics 18, 026008','https://iopscience.iop.org/article/10.1088/1748-3190/acb477/meta','j',0,''],
+ [2023,'Elephants have an adaptable prehensile grip','Schulz, A.K., Wu, J.N., Tang, C.Y., Seleb, B., Reidenberg, J.S., Elgart, N., Hu, D.L.*','Bioinspiration & Biomimetics 18, 026008','https://iopscience.iop.org/article/10.1088/1748-3190/acb477/meta','j',1,''],
  [2023,'Drying dynamics of pellet feces','Magondu, B., Lee, A.B., Schulz, A.K., Yang, P., Buchelli, G., Meng, M., Kaminski, C., Carver, S., Hu, D.L.*','Soft Matter 19, 723–732','https://doi.org/10.1039/D2SM00359G','j',0,''],
  [2023,'Conservation tools: the next generation of engineering–biology collaborations','Schulz, A.K.*, Shriver, C., Seleb, B., Stathatos, S., Weigel, E., Chang, Y., Bhamla, S., Hu, D., Mendelson, J.','Journal of the Royal Society Interface 20, 205','https://royalsocietypublishing.org/doi/abs/10.1098/rsif.2023.0232','j',0,''],
  [2023,'Bioinspired robots can foster nature conservation','Chellapurath, M.*, Khandelwal, P., Schulz, A.K.','Frontiers in Robotics and AI 10','https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2023.1145798/full','e',0,''],
@@ -923,8 +1051,55 @@ document.getElementById('mentees').innerHTML=MENTEES.filter(m=>m[5]===0).sort(by
 document.getElementById('guests').innerHTML=MENTEES.filter(m=>m[5]===2).sort(byFirst).map(squadItem).join('');
 document.getElementById('mascots').innerHTML=MENTEES.filter(m=>m[5]===3).sort(byFirst).map(squadItem).join('');
 document.getElementById('alumni').innerHTML=MENTEES.filter(m=>m[5]===1).sort(byFirst).map(squadItem).join('');
-const COLLABS=[['Christoph Keplinger','MPI-IS'],['Florian Hartmann','MPI-IS'],['Gunther Richter','MPI-IS'],['Michael Muehlebach','MPI-IS'],['Vesna Srot','MPI-FKF'],['Peter A. van Aken','MPI-FKF'],['Giulia Ballardini','MPI-IS'],['Lawrence Smith','MPI-IS'],['Muhammad Yunusa','MPI-IS'],['Michael Brecht','HU Berlin'],['Elisabetta Matsumoto','Georgia Tech'],['Abigale Stangl','Georgia Tech'],['Maegan Tucker','Georgia Tech'],['Roxanne Moore','Georgia Tech'],['Krishma Singal','Georgia Tech'],['David L. Hu','Georgia Tech'],['Adam Summers','Univ. of Washington'],['Karly Cohen','Univ. of Washington'],['Claire Higgins','Imperial College'],['Joseph Mendelson III','Zoo Atlanta']];
-document.getElementById('collabs').innerHTML=COLLABS.slice().sort(byFirst).map(([n,a])=>`<span>${esc(n)} <i>· ${esc(a)}</i></span>`).join('');
+const COLLABS=[['Christoph Keplinger','MPI-IS','christoph-keplinger.jpg'],['Florian Hartmann','MPI-IS','florian-hartmann.jpg'],['Gunther Richter','MPI-IS','gunther-richter.jpg'],['Michael Muehlebach','MPI-IS','michael-muehlebach.jpg'],['Vesna Srot','MPI-FKF','vesna-srot.jpg'],['Peter A. van Aken','MPI-FKF','peter-van-aken.jpg'],['Giulia Ballardini','MPI-IS','giulia-ballardini.jpg'],['Lawrence Smith','MPI-IS','lawrence-smith.jpg'],['Muhammad Yunusa','MPI-IS','muhammad-yunusa.jpg'],['Jelena Lazovic Zinnanti','MPI-IS','jelena-zinnanti.jpg'],['Michael Brecht','HU Berlin','michael-brecht.jpg'],['Elisabetta Matsumoto','Georgia Tech','elisabetta-matsumoto.jpg'],['Abigale Stangl','Georgia Tech','abigale-stangl.jpg'],['Maegan Tucker','Georgia Tech','maegan-tucker.jpg'],['Roxanne Moore','Georgia Tech','roxanne-moore.jpg'],['Krishma Singal','Georgia Tech','krishma-singal.jpg'],['David L. Hu','Georgia Tech','david-hu.jpg'],['Adam Summers','Univ. of Washington','adam-summers.jpg'],['Karly Cohen','Univ. of Washington','karly-cohen.jpg'],['Claire Higgins','Imperial College','claire-higgins.jpg'],['Joseph Mendelson III','Zoo Atlanta','joseph-mendelson.jpg']];
+/* allied guilds: same roster layout as the squad; a photo file in the third field replaces the initials */
+/* lab or profile page for each ally (verified); LinkedIn added only where known */
+const ALLY_WEB={
+ 'Adam Summers':'https://www.biology.washington.edu/people/adam-summers',
+ 'Christoph Keplinger':'https://is.mpg.de/en/person/ck',
+ 'Claire Higgins':'https://profiles.imperial.ac.uk/c.higgins',
+ 'David L. Hu':'https://hu.gatech.edu/',
+ 'Elisabetta Matsumoto':'https://matsumoto.gatech.edu/',
+ 'Florian Hartmann':'https://is.mpg.de/person/hartmann',
+ 'Giulia Ballardini':'https://hi.is.mpg.de/~ballardini',
+ 'Joseph Mendelson III':'https://research.gatech.edu/joseph-mendelson-phd',
+ 'Lawrence Smith':'https://is.mpg.de/person/lsmith',
+ 'Maegan Tucker':'https://research.gatech.edu/maegan-tucker',
+ 'Michael Brecht':'https://www.biologie.hu-berlin.de/en/groupsites/sfb618/people/brecht_michael',
+ 'Michael Muehlebach':'https://lds.is.mpg.de/person/mmuehlebach',
+ 'Peter A. van Aken':'https://www.fkf.mpg.de/person/41592/5413535',
+ 'Roxanne Moore':'https://www.me.gatech.edu/faculty/moore'
+};
+const ALLY_LI={
+ 'Abigale Stangl':'https://www.linkedin.com/in/abigalestangl/',
+ 'Adam Summers':'https://www.linkedin.com/in/adam-summers-a6a3b39/',
+ 'Claire Higgins':'https://www.linkedin.com/in/claire-higgins-4ba66a40/',
+ 'David L. Hu':'https://www.linkedin.com/in/davidhugt/',
+ 'Elisabetta Matsumoto':'https://www.linkedin.com/in/elisabetta-matsumoto-9938247b/',
+ 'Florian Hartmann':'https://www.linkedin.com/in/florian-hartmann-0a77a3178/',
+ 'Giulia Ballardini':'https://www.linkedin.com/in/giulia-ballardini/',
+ 'Gunther Richter':'https://www.linkedin.com/in/gunther-richter-4a72748b/',
+ 'Jelena Lazovic Zinnanti':'https://www.linkedin.com/in/jelena-lazovic-9b198784/',
+ 'Joseph Mendelson III':'https://www.linkedin.com/in/joe-mendelson-8978837/',
+ 'Karly Cohen':'https://www.linkedin.com/in/karly-cohen-340a30296/',
+ 'Krishma Singal':'https://www.linkedin.com/in/krishma-singal/',
+ 'Lawrence Smith':'https://www.linkedin.com/in/lawsmith408/',
+ 'Maegan Tucker':'https://www.linkedin.com/in/maegan-tucker/',
+ 'Michael Muehlebach':'https://www.linkedin.com/in/michael-muehlebach/',
+ 'Muhammad Yunusa':'https://www.linkedin.com/in/muhammad-yunusa-77a2a641/',
+ 'Peter A. van Aken':'https://www.linkedin.com/in/peter-a-van-aken-568429111/',
+ 'Roxanne Moore':'https://www.linkedin.com/in/roxanneamoore/',
+ 'Vesna Srot':'https://www.linkedin.com/in/vesna-srot-834a4517/'
+};
+function allyItem([n,a,ph]){
+  const ini=n.split(/\s+/).filter(w=>/^[A-Z]/.test(w)).map(w=>w[0]).filter((c,i,arr)=>i===0||i===arr.length-1).join('');
+  const av=ph?`<img class="avatar" src="images/collabs/${ph}" alt="Portrait of ${esc(n)}" width="48" height="48" loading="lazy">`:`<span class="avatar avatar-ini" aria-hidden="true">${ini}</span>`;
+  const web=ALLY_WEB[n], li=ALLY_LI[n];
+  const name=web?`<a href="${web}" class="li-link">${esc(n)}</a>`:esc(n);
+  const tag=li?`<a href="${li}" class="li-link"><span class="li-tag" aria-label="${esc(n)} on LinkedIn">in</span></a>`:'';
+  return `<li>${av}<div><div class="n">${name}${tag}</div><div class="r">${esc(a)}</div></div></li>`;
+}
+document.getElementById('collabs').innerHTML=COLLABS.slice().sort(byFirst).map(allyItem).join('');
 
 
 /* light / dark toggle: remembers the choice when the browser allows it */
