@@ -833,6 +833,8 @@ footer a{color:var(--body)}
       <ul class="roster roster-grid" id="alumni"></ul>
       <h4 class="subh">Allied guilds</h4>
       <ul class="roster roster-grid allies" id="collabs"></ul>
+      <h4 class="subh">Former fellowship</h4>
+      <ul class="roster roster-grid allies" id="pastcollabs"></ul>
     </div>
   </section>
 
@@ -1051,7 +1053,7 @@ document.getElementById('mentees').innerHTML=MENTEES.filter(m=>m[5]===0).sort(by
 document.getElementById('guests').innerHTML=MENTEES.filter(m=>m[5]===2).sort(byFirst).map(squadItem).join('');
 document.getElementById('mascots').innerHTML=MENTEES.filter(m=>m[5]===3).sort(byFirst).map(squadItem).join('');
 document.getElementById('alumni').innerHTML=MENTEES.filter(m=>m[5]===1).sort(byFirst).map(squadItem).join('');
-const COLLABS=[['Christoph Keplinger','MPI-IS','christoph-keplinger.jpg'],['Florian Hartmann','MPI-IS','florian-hartmann.jpg'],['Gunther Richter','MPI-IS','gunther-richter.jpg'],['Michael Muehlebach','MPI-IS','michael-muehlebach.jpg'],['Vesna Srot','MPI-FKF','vesna-srot.jpg'],['Peter A. van Aken','MPI-FKF','peter-van-aken.jpg'],['Giulia Ballardini','MPI-IS','giulia-ballardini.jpg'],['Lawrence Smith','MPI-IS','lawrence-smith.jpg'],['Muhammad Yunusa','MPI-IS','muhammad-yunusa.jpg'],['Jelena Lazovic Zinnanti','MPI-IS','jelena-zinnanti.jpg'],['Michael Brecht','HU Berlin','michael-brecht.jpg'],['Elisabetta Matsumoto','Georgia Tech','elisabetta-matsumoto.jpg'],['Abigale Stangl','Georgia Tech','abigale-stangl.jpg'],['Maegan Tucker','Georgia Tech','maegan-tucker.jpg'],['Roxanne Moore','Georgia Tech','roxanne-moore.jpg'],['Krishma Singal','Georgia Tech','krishma-singal.jpg'],['David L. Hu','Georgia Tech','david-hu.jpg'],['Adam Summers','Univ. of Washington','adam-summers.jpg'],['Karly Cohen','Univ. of Washington','karly-cohen.jpg'],['Claire Higgins','Imperial College','claire-higgins.jpg'],['Joseph Mendelson III','Zoo Atlanta','joseph-mendelson.jpg']];
+const COLLABS=[['Katsuya Inoue','WPI-SKCM²','katsuya-inoue.jpg'],['Malcolm Kadodwala','University of Glasgow','malcolm-kadodwala.jpg'],['Susanne Hoffmann','MPI-BI','susanne-hoffmann.jpg'],['Maude Baldwin','MPI-BI','maude-baldwin.jpg'],['Cassandra Donatelli','UW Tacoma','cassandra-donatelli.jpg'],['Bart Boom','Univ. of Washington','bart-boom.jpg'],['Megan Vandenberg','Univ. of Washington','megan-vandenberg.jpg'],['Gregory Sawicki','Georgia Tech','gregory-sawicki.jpg'],['Christoph Keplinger','MPI-IS','christoph-keplinger.jpg'],['Florian Hartmann','MPI-IS','florian-hartmann.jpg'],['Gunther Richter','MPI-IS','gunther-richter.jpg'],['Michael Muehlebach','MPI-IS','michael-muehlebach.jpg'],['Vesna Srot','MPI-FKF','vesna-srot.jpg'],['Peter A. van Aken','MPI-FKF','peter-van-aken.jpg'],['Giulia Ballardini','MPI-IS','giulia-ballardini.jpg'],['Lawrence Smith','MPI-IS','lawrence-smith.jpg'],['Muhammad Yunusa','MPI-IS','muhammad-yunusa.jpg'],['Jelena Lazovic Zinnanti','MPI-IS','jelena-zinnanti.jpg'],['Michael Brecht','HU Berlin','michael-brecht.jpg'],['Elisabetta Matsumoto','Georgia Tech','elisabetta-matsumoto.jpg'],['Abigale Stangl','Georgia Tech','abigale-stangl.jpg'],['Maegan Tucker','Georgia Tech','maegan-tucker.jpg'],['Roxanne Moore','Georgia Tech','roxanne-moore.jpg'],['Krishma Singal','Rice University','krishma-singal.jpg'],['David L. Hu','Georgia Tech','david-hu.jpg'],['Adam Summers','Univ. of Washington','adam-summers.jpg'],['Karly Cohen','Univ. of Washington','karly-cohen.jpg'],['Claire Higgins','Imperial College','claire-higgins.jpg'],['Joseph Mendelson III','Zoo Atlanta','joseph-mendelson.jpg']];
 /* allied guilds: same roster layout as the squad; a photo file in the third field replaces the initials */
 /* lab or profile page for each ally (verified); LinkedIn added only where known */
 const ALLY_WEB={
@@ -1071,6 +1073,12 @@ const ALLY_WEB={
  'Roxanne Moore':'https://www.me.gatech.edu/faculty/moore'
 };
 const ALLY_LI={
+ 'Megan Vandenberg':'https://www.linkedin.com/in/megan-louise-vandenberg-a04917209/',
+ 'Katsuya Inoue':'https://www.linkedin.com/in/katsuya-inoue-bb126444/',
+ 'Malcolm Kadodwala':'https://www.linkedin.com/in/malcolm-kadodwala-08234437/',
+ 'Bart Boom':'https://www.linkedin.com/in/bart-boom/',
+ 'Cassandra Donatelli':'https://www.linkedin.com/in/cassandra-donatelli-4445a330/',
+ 'Gregory Sawicki':'https://www.linkedin.com/in/gregory-sawicki-phd-26abb52/',
  'Abigale Stangl':'https://www.linkedin.com/in/abigalestangl/',
  'Adam Summers':'https://www.linkedin.com/in/adam-summers-a6a3b39/',
  'Claire Higgins':'https://www.linkedin.com/in/claire-higgins-4ba66a40/',
@@ -1097,9 +1105,12 @@ function allyItem([n,a,ph]){
   const web=ALLY_WEB[n], li=ALLY_LI[n];
   const name=web?`<a href="${web}" class="li-link">${esc(n)}</a>`:esc(n);
   const tag=li?`<a href="${li}" class="li-link"><span class="li-tag" aria-label="${esc(n)} on LinkedIn">in</span></a>`:'';
-  return `<li>${av}<div><div class="n">${name}${tag}</div><div class="r">${esc(a)}</div></div></li>`;
+  return `<li>${av}<div><div class="n">${name}${tag}</div>${a?`<div class="r">${esc(a)}</div>`:''}</div></li>`;
 }
-document.getElementById('collabs').innerHTML=COLLABS.slice().sort(byFirst).map(allyItem).join('');
+/* past collaborators ("Former fellowship"); everyone else in COLLABS is a current allied guild */
+const PAST=new Set(['Claire Higgins','David L. Hu','Joseph Mendelson III','Krishma Singal','Maegan Tucker','Michael Brecht','Michael Muehlebach','Roxanne Moore']);
+document.getElementById('collabs').innerHTML=COLLABS.filter(c=>!PAST.has(c[0])).sort(byFirst).map(allyItem).join('');
+document.getElementById('pastcollabs').innerHTML=COLLABS.filter(c=>PAST.has(c[0])).sort(byFirst).map(allyItem).join('');
 
 
 /* light / dark toggle: remembers the choice when the browser allows it */
